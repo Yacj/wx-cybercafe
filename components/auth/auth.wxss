@@ -1,0 +1,16 @@
+.cu-dialog{
+    width: 600rpx;
+}
+.cu-dialog .logo{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.cu-dialog .logo image{
+  width: 150rpx;
+height: 150rpx;
+
+}
+.border-top{
+    border-top: 1rpx solid #ddd;
+}

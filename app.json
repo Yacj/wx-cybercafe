@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/cybercafe/cybercafe",
+    "pages/mall/mall",
+    "pages/my/my",
+    "pages/kf/kf",
+    "pages/activity/activity",
+    "pages/bindCard/bindCard"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "鲨鱼网咖",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+"tabBar": {
+  "custom": true,
+  "color": "#7A7E83",
+  "selectedColor": "#3cc51f",
+  "borderStyle": "black",
+  "backgroundColor": "#ffffff",
+  "list": [
+    {
+      "pagePath": "pages/mall/mall",
+      "iconPath": "/assets/img/jifenshangcheng.png",
+      "selectedIconPath": "/assets/img/jifenshangcheng-1.png",
+      "text": "商城"
+    },
+    {
+      "pagePath": "pages/activity/activity",
+      "iconPath": "/assets/img/huodong.png",
+      "selectedIconPath": "/assets/img/huodong-1.png",
+      "text": "活动"
+    },
+    {
+      "pagePath": "pages/cybercafe/cybercafe",
+      "iconPath": "/assets/img/shayu.png",
+      "selectedIconPath": "/assets/img/shayu.png"
+    },
+    {
+      "pagePath": "pages/kf/kf",
+      "iconPath": "/assets/img/kefu.png",
+      "selectedIconPath": "/assets/img/kefu-1.png",
+      "text": "客服"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "iconPath": "/assets/img/wode.png",
+      "selectedIconPath": "/assets/img/wode-1.png",
+      "text": "我的"
+    }
+  ]
+},
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

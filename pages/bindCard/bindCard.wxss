@@ -1,0 +1,12 @@
+.show{
+    top: -70rpx;
+    animation: show 2s;
+    animation-timing-function:ease;
+}
+@keyframes show
+{
+    0% {top:-70rpx;}
+    10% {top:0rpx;}
+    80% {top:0rpx;}
+    100% {top:-70rpx;}
+}

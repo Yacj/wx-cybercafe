@@ -1,0 +1,113 @@
+<!--pages/cybercafe/cybercafe.wxml-->
+<cu-custom bgColor="bg-white" isCustom="{{false}}">
+    <view slot="content">鲨鱼网咖</view>
+</cu-custom>
+<view class="container">
+    <view class="container-header">
+        <view class="swiper">
+            <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true"
+                interval="5000" duration="500">
+                <swiper-item wx:for="{{swiperList}}" wx:key>
+                    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view class="cu-card case container-location">
+            <view class="cu-item shadow">
+                <view class="bg-white padding" style="border-bottom:1px solid rgba(220,222,221,1)">
+                    <view class="cf">
+                        <text class="cuIcon-locationfill icon fl"></text>
+                        <view class="fl">距您0.00米</view>
+                        <view class="fr">路线导航 >></view>
+                    </view>
+                </view>
+                <view class="bg-white padding">
+                    <view class="cf">
+                        <view class="fl">鲨鱼网咖（皇巢店）</view>
+                        <view class="fr">门店详情 >></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="container-item">
+        <view class="cu-list grid col-4">
+            <block wx:for="{{iconList}}" wx:key="item.id">
+                <view class="cu-item" bindtap="itemckcred" data-index="{{item.id}}" data-itemtype="{{item.type}}">
+                    <view style="">
+                        <image src="{{item.img}}" mode="widthFix" lazy-load="false" binderror="" bindload=""
+                            class="item-img">
+                        </image>
+                    </view>
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+        <view class="jf-item padding-sm">
+            <view class=" cf ">
+                <view class="fl">
+                    <view class="flex center padding-xs" hover-class="none" hover-stop-propagation="false">
+                        <image class="fl-img" src="/assets/img/home-jf.png" mode="widthFix" lazy-load="false"
+                            binderror="" bindload="">
+                        </image>
+                        <view class="flex-sub text-center" hover-class="none" hover-stop-propagation="false"
+                            style="margin-left: 15rpx;margin-top: -11rpx">
+                            <view class="text-1">
+                                积分商城
+                            </view>
+                            <view class="text-2">
+                                积分兑好礼 好物礼缤纷
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="fr">
+                    <button class="cu-btn round bg">
+
+                        去逛逛
+
+                    </button>
+                </view>
+            </view>
+        </view>
+        <view class="crad-item" hover-class="none" hover-stop-propagation="false">
+            <view class="cu-card case">
+                <view class="cu-item">
+                    <view class="image">
+                        <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix">
+                        </image>
+                    </view>
+                    <view class="cu-list">
+                        <view class="bg-white">
+                            <view class="cf">
+                                <view class=" fl padding-sm text-theme">活动</view>
+                                <view class=" fr padding-sm text-theme">详情 >>></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="cu-card case">
+                <view class="cu-item">
+                    <view class="image">
+                        <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix">
+                        </image>
+                    </view>
+                    <view class="cu-list">
+                        <view class="bg-white">
+                            <view class="cf">
+                                <view class=" fl padding-sm text-theme">活动</view>
+                                <view class=" fr padding-sm text-theme">详情 >>></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="container-bottom" hover-class="none" hover-stop-propagation="false">
+
+    </view>
+    <van-toast id="van-toast"></van-toast>
+    <authorize show="{{iShidden}}"></authorize>
+</view>

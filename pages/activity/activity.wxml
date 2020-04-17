@@ -1,0 +1,34 @@
+<!--pages/activity/activity.wxml-->
+<cu-custom bgColor="bg-white" isCustom="{{false}}">
+    <view slot="content">活动</view>
+</cu-custom>
+<view class="container">
+    <view class="container-header">
+        <view class="swiper">
+            <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true"
+                interval="5000" duration="500">
+                <swiper-item wx:for="{{swiperList}}" wx:key>
+                    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <view class="container-list" hover-class="none" hover-stop-propagation="false">
+        <view class="cu-card case">
+            <view class="cu-item shadow bg-white">
+                <view class="image">
+                    <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="widthFix">
+                    </image>
+                </view>
+                <view class="cu-list">
+                    <view class="bg-white">
+                        <view class="cf">
+                            <view class=" fl padding-sm text-theme">活动</view>
+                            <view class=" fr padding-sm text-theme">详情 >>></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

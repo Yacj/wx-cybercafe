@@ -1,0 +1,57 @@
+<!--pages/mall/mall.wxml-->
+<cu-custom bgColor="bg-white" isCustom="{{false}}">
+    <view slot="content">积分商城</view>
+</cu-custom>
+<view>
+    <view class="container-header">
+        <view class="swiper">
+            <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true"
+                    interval="5000" duration="500">
+                <swiper-item wx:for="{{swiperList}}" wx:key>
+                    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <van-notice-bar
+            text="本网咖环境优雅、设备一流、服务周到、价格实惠"
+    >
+    </van-notice-bar>
+    <scroll-view scroll-x class="bg-white nav text-center">
+        <view class="cu-item {{index==TabCur?'text-theme cur':''}} text-xl" wx:for="{{2}}" wx:key bindtap="tabSelect"
+              data-id="{{index}}">
+            Tab{{index}}
+        </view>
+    </scroll-view>
+    <view class="contact">
+        <view class="mall-list">
+            <block wx:for="{{mall_list}}" wx:key="index" wx:for-item="product">
+                <view class="mall-item" data-id="{{product.id}}">
+                    <image class="mall-img on-sale" src="{{product.img}}" data-pid="{{product.id}}"
+                           mode="aspectFill" bindtap="">
+                    </image>
+                    <view class="bg-white">
+                        <view class=" cf padding-sm">
+                            <view class="fl padding-sm">
+                                <view>
+                                    {{product.name}}
+                                </view>
+                                <view class="text-gray text-sm">
+                                    <view class="margin-right-xs">
+                                        9800
+                                    </view>
+                                    积分 +￥98
+                                </view>
+                            </view>
+                            <view class="fr">
+                                <view class="bg-theme radius fr padding-sm">
+                                    兑换
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

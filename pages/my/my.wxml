@@ -1,0 +1,196 @@
+<!--pages/my/my.wxml-->
+<cu-custom bgColor="bg-white" isCustom="{{false}}">
+    <view slot="content">我的</view>
+</cu-custom>
+<view class="my">
+    <view class="my-header">
+        <view class="my-header-info">
+            <block wx:if="{{userInfo === false}}">
+                <view class="my-header-left">
+                </view>
+                <view class="my-header-center" style="margin-top:30rpx" bindtap="goLogin">
+                    <view class='headBorder text-theme'>
+                        <image src="/assets/img/avatar.png" class="Head"></image>
+                    </view>
+                    <view class='dian'></view>
+                    <view class='nameBox'>
+                        <view class="name">
+                            请登录
+                        </view>
+                    </view>
+                </view>
+                <view class='my-header-right'>
+                </view>
+            </block>
+            <block wx:if="{{userInfo === true}}">
+                <view class="my-header-left">
+                    <view class="my-header-leftDsc text-theme">
+                        余额
+                    </view>
+                    <view class="my-header-leftDsc text-theme">
+                       {{money}}
+                    </view>
+                    <view class="my-header-leftDsc">
+                        <button class="cu-btn line-brown round text-theme">充值</button>
+                    </view>
+                </view>
+                <view class="my-header-center">
+                    <view class='headBorder text-theme'>
+                        <open-data type="userAvatarUrl" class="Head"></open-data>
+                    </view>
+                    <view class='dian'></view>
+                    <view class='nameBox'>
+                        <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
+                    </view>
+                    <view class='lv text-theme'>鲨鱼黑砖</view>
+                </view>
+                <view class='my-header-right'>
+                    <view class='mine_head_rightDes text-theme'>积分</view>
+                    <view class='mine_head_rightDes text-theme'>
+                    {{points}}
+                    </view>
+                    <view class='mine_head_rightDes'>
+                        <button class="cu-btn line-brown round text-theme">兑换</button>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="my-container" >
+        <block wx:if="{{userInfo === true}}">
+            <block wx:if="{{userCard === false}}">
+                <view class="cu-list menu sm-border card-menu margin-top">
+                    <view class="cu-item arrow" bindtap="gobindcard">
+                        <view class="content padding-sm">
+                            <view>
+                                <text class="" style="color:#E9533E">绑定身份证</text>
+                            </view>
+                            <view class="text-sm">
+                                <text class="">请您尽快绑定身份证号码,以便您能体验更好的上网服务!</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <block wx:if="{{userCard === true}}">
+                <view class="cu-list menu sm-border card-menu margin-top">
+                    <view class="cu-item arrow">
+                        <view class="content">
+                            <image src="/assets/img/user-time.png" class="png" mode="aspectFit"></image>
+                            <text class="text-grey">最近上机</text>
+                            <text class="text-theme margin-left-xs">{{last_time}}</text>
+                        </view>
+                    </view>
+                    <view class="cu-item arrow">
+                        <view class="content">
+                            <image src="/assets/img/yiqizouguo.png" class="png" mode="aspectFit"></image>
+                            <text class="text-grey">感谢您陪伴鲨鱼一起走过的</text>
+                            <text class="text-theme margin-left-xs">{{reg_time}}</text>
+                            <text class="text-grey margin-left-xs">天</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <view class="cu-card case margin-top">
+            <view class="cu-item">
+                <view class="bg-white padding" style="border-bottom:1px solid rgba(220,222,221,1)">
+                    <view class="cf">
+                        <view class="fl text-lg">我的订单</view>
+                        <view class="fr">更多 >></view>
+                    </view>
+                </view>
+                <view class="bg-white">
+                    <block wx:if="{{order.length <= 0}}">
+                        <view class="cu-item ">
+                            <view class="content">
+                                <view class="padding" style="text-align: center;">
+                                    <text class="">暂无订单</text>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:if="{{order.length > 0}}">
+                        <view class="cu-list menu-avatar">
+                            <view class="cu-item ">
+                                <view class="cu-avatar radius lg"
+                                      style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);">
+                                </view>
+                                <view class="content">
+                                    <view class="">
+                                        <text class="">鲨鱼3周年纪念保温杯</text>
+                                    </view>
+                                </view>
+                                <view class="action">
+                                    <view class="text-theme text-sm">已支付</view>
+                                    <view class="text-theme text-sm">积分:500</view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="cu-list menu sm-border card-menu margin-top">
+            <view class="cu-item">
+                <view class="content">
+                    <image src="/assets/img/6959.png" class="png" mode="aspectFit" style="top: -3px"></image>
+                    <text class="">本月网费充值TOP3</text>
+                </view>
+                <view class="action">
+                    <image src="/assets/img/6960.png" class="png" mode="aspectFit" style="top: 5px"></image>
+                    <text class="">本月在线时长TOP3</text>
+                </view>
+            </view>
+            <view class="cu-item">
+                <view class="content">
+                    <text class="" decode="{{true}}" space="{{true}}">TOP1&ensp;</text>
+                    <text class="" decode="{{true}}" space="{{true}}">王&ensp;</text>
+                    <text class="">88888元</text>
+                </view>
+                <view class="action">
+                    <text class="" decode="{{true}}" space="{{true}}">TOP1&ensp;</text>
+                    <text class="" decode="{{true}}" space="{{true}}">王&ensp;</text>
+                    <text class="">88小时</text>
+                </view>
+            </view>
+            <view class="cu-item">
+                <view class="content">
+                    <text class="" decode="{{true}}" space="{{true}}">TOP1&ensp;</text>
+                    <text class="" decode="{{true}}" space="{{true}}">王&ensp;</text>
+                    <text class="">88888元</text>
+                </view>
+                <view class="action">
+                    <text class="" decode="{{true}}" space="{{true}}">TOP1&ensp;</text>
+                    <text class="" decode="{{true}}" space="{{true}}">王&ensp;</text>
+                    <text class="">88小时</text>
+                </view>
+            </view>
+            <view class="cu-item">
+                <text class="cuIcon-unfold lg text-xsl" style="margin:0 auto"></text>
+            </view>
+        </view>
+        <view class="cu-list menu sm-border card-menu margin-top">
+            <view class="cu-item arrow">
+                <view class="content">
+                    <image src="/assets/img/my-yhj.png" class="png" mode="aspectFit"></image>
+                    <text class="text-grey">优惠卷</text>
+                </view>
+            </view>
+            <view class="cu-item arrow">
+                <view class="content">
+                    <image src="/assets/img/my-gy.png" class="png" mode="aspectFit"></image>
+                    <text class="text-grey">关于我们</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="container-bottom" hover-class="none" hover-stop-propagation="false">
+</view>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+    <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+    <image src='/assets/img/logo.png' class='png' mode='aspectFit'></image>
+    <view class='gray-text'>加载中...</view>
+</view>
+<auth is-hidden="{{wxlogin}}" bind:afterAuth="afterAuth"></auth>

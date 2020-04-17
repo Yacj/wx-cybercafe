@@ -1,0 +1,38 @@
+/* pages/mall/mall.wxss */
+.container-header {
+    width: 750rpx;
+    height: 466rpx;
+    background: linear-gradient(90deg, rgba(174, 170, 167, 1) 0%, rgba(235, 230, 226, 1) 49%, rgba(218, 224, 228, 1) 100%);
+}
+
+.swiper {
+    padding: 15px;
+}
+
+.swiper image {
+    border-radius: 16px;
+}
+.contact{
+    width: 100%;
+    background: #fff;
+    margin-top: 25rpx;
+}
+.mall-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0rpx;
+    padding: 10rpx;
+    background: #fff;
+}
+.mall-item{
+    width: 360rpx;
+    margin-bottom: 30rpx;
+}
+.mall-item .mall-img{
+    position: relative;
+    width: 360rpx;
+    height: 360rpx;
+}

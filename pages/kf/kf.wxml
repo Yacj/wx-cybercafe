@@ -1,0 +1,10 @@
+<!--pages/kf/kf.wxml-->
+<cu-custom bgColor="bg-white" isCustom="{{false}}">
+    <view slot="content">客服</view>
+</cu-custom>
+<view class="imagesize">
+<image src="/assets/img/kf.png" mode="widthFix"></image>
+</view>
+<view class="padding flex flex-direction">
+    <button class="cu-btn bg-theme lg" open-type='contact'>联系客服</button>
+</view>

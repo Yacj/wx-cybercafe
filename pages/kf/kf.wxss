@@ -1,0 +1,5 @@
+/* pages/kf/kf.wxss */
+.imagesize {
+    display: flex;
+ justify-content: center;
+}

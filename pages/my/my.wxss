@@ -1,0 +1,116 @@
+/* pages/my/my.wxss */
+.my-header{
+    width: 750rpx;
+    height: 466rpx;
+    background: linear-gradient(90deg, rgba(174, 170, 167, 1) 0%, rgba(235, 230, 226, 1) 49%, rgba(218, 224, 228, 1) 100%);
+}
+
+.my-header-info{
+    width: 94%;
+    height: 299rpx;
+    margin: auto;
+    background: #9D9087;
+    position: absolute;
+    top: 200rpx;
+    left: 0;
+    right: 0;
+    border-radius: 8rpx;
+    display: flex;
+    justify-content: space-around;
+
+}
+.my-header-info .my-header-left{
+    width: 33%;
+    height: 78rpx;
+    margin-top: 72rpx;
+}
+.my-header-info .my-header-left .my-header-leftDsc{
+    text-align: center;
+    font-size: 36rpx;
+    line-height: 26rpx;
+    margin-top: 16rpx;
+    color: #333333;
+}
+.my-header-center{
+    width: 34%;
+    height: 100%;
+    position: relative;
+}
+.headBorder{
+    position: absolute;
+    width: 166rpx;
+    height: 166rpx;
+    background: #ffffff;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+.Head{
+    width: 158rpx;
+    height: 158rpx;
+    display: block;
+    clip-path: circle(79rpx at center);
+    margin: 4rpx auto;
+}
+.dian{
+    width: 100rpx;
+    height: 98rpx;
+    margin-top: 16rpx;
+}
+.nameBox{
+    width: 100%;
+    height: 34rpx;
+    margin-top: 16rpx;
+    position: relative;
+}
+.name{
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: bold;
+    margin:auto;
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    margin-top: 50rpx;
+    color: #fff;
+}
+.lv{
+    width: 130rpx;
+    height: 40rpx;
+    font-size: 22rpx;
+    margin:24rpx auto;
+    border-radius: 20rpx;
+    text-align: center;
+    line-height: 40rpx;
+    color: #ffffff;
+    margin-top: 80rpx;
+}
+.my-header-right{
+    width: 33%;
+    height: 78rpx;
+    margin-top: 72rpx;
+}
+.my-header-right .mine_head_rightDes{
+    text-align: center;
+    font-size: 36rpx;
+    line-height: 26rpx;
+    margin-top: 16rpx;
+    color:#333333;
+}
+
+.my-container{
+    margin-top: -15%;
+}
+.png{
+    width: 35rpx !important;
+    height: 35rpx !important;
+}
+
+.user-location{
+    padding-top: 50%;
+    margin-right: 2rpx;
+    color: var(--theme-color);
+    position: relative;
+}

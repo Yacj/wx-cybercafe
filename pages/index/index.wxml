@@ -1,0 +1,36 @@
+
+<activity wx:if="{{pagecur === 'activity'}}"></activity>
+<cybercafe wx:if="{{pagecur === 'cybercafe'}}"></cybercafe>
+<mall wx:if="{{pagecur === 'mall'}}"></mall>
+<my wx:if="{{pagecur === 'my'}}" id="my"></my>
+<view class="cu-bar tabbar tabbar bg-white shadow foot">
+    <view class="action" bindtap="NavChange" data-cur="mall">
+        <view class='cuIcon-cu-image'>
+            <image src="../../assets/img/jifenshangcheng{{pagecur === 'mall'?'-1':''}}.png"></image>
+        </view>
+          <view class="{{pagecur =='mall'?'text-color':''}}">商城</view>
+    </view>
+    <view class="action" bindtap="NavChange" data-cur="activity">
+        <view class='cuIcon-cu-image'>
+            <image src="../../assets/img/huodong{{pagecur  === 'activity'?'-1':''}}.png"></image>
+        </view>
+        <view class="{{pagecur =='activity'?'text-color':''}}"> 活动</view>
+    </view>
+    <view class="action" data-cur="cybercafe" bindtap="NavChange">
+        <view class="on-image">
+            <image src="../../assets/img/shayu.png" style=""></image>
+        </view>
+    </view>
+    <view class="action" bindtap="NavChange" data-cur="service">
+        <view class='cuIcon-cu-image'>
+            <image src="../../assets/img/kefu{{pagecur  === 'service'?'-1':''}}.png"></image>
+        </view>
+        <view class="{{pagecur =='service'?'text-color':''}}">  客服</view>
+    </view>
+    <view class="action" bindtap="NavChange" data-cur="my">
+        <view class='cuIcon-cu-image'>
+            <image src="../../assets/img/wode{{pagecur  === 'my'?'-1':''}}.png"></image>
+        </view>
+        <view class="{{pagecur =='my'?'text-color':''}}">我的</view>
+    </view>
+</view>

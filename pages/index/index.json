@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cybercafe": "/pages/cybercafe/cybercafe",
+    "mall": "/pages/mall/mall",
+    "my":"/pages/my/my",
+    "activity": "/pages/activity/activity"
+  }
+}
