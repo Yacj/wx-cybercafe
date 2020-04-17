@@ -1,8 +1,0 @@
-GET https://www.tuopu.fun/admin.php/api/admin/Get_UserInfo?openid=oq2555DwSp8JntPeErLAuSFUzvGk
-Accept: application/json
-
-###
-POST https://www.tuopu.fun/admin.php/api/login/Save_User
-Content-Type: application/x-www-form-urlencoded
-
-uid=362334199112250034&phone=15255338901&password=wxw0105&openid=oq2555DwSp8JntPeErLAuSFUzvGk
