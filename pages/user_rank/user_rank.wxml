@@ -1,0 +1,91 @@
+<cu-custom bgColor="bg-trans" isBack="{{true}}">
+  <view slot="backText">绑定身份证</view>
+</cu-custom>
+<view class="PromoterRank">
+  <view class="redBg bg-color">
+    <view class="header">
+      <scroll-view scroll-x class="bg-white nav text-center">
+        <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap="tabSelect"
+          data-id="{{index}}">
+          {{tabNav[index]}}
+        </view>
+      </scroll-view>
+      <view class="rank acea-row row-bottom row-around" wx:if="{{TabCur === 0}}">
+        <view class="item" wx:if="{{Two.uid ? false : true}}">
+          <view class="pictrue">
+            <image src="/assets/img/rank_a.png"></image>
+          </view>
+          <view class="name line1">{{Two.name}}</view>
+          <view class="num">{{Two.money}}</view>
+        </view>
+        <view class="item">
+          <view class="pictrue">
+            <image src="{{One.avatar}}"></image>
+          </view>
+          <view class="name line1">{{One.name}}</view>
+          <view class="num">{{One.money}}</view>
+        </view>
+        <view class="item">
+          <view class="pictrue">
+            <image src="{{Three.avatar}}"></image>
+          </view>
+          <view class="name line1">{{Three.name}}</view>
+          <view class="num">{{Three.money}}</view>
+        </view>
+      </view>
+      <view class="rank acea-row row-bottom row-around" wx:if="{{TabCur === 1}}">
+        <view class="item" wx:if="{{Two.uid ? false : true}}">
+          <view class="pictrue">
+            <image src="{{One.avatar}}"></image>
+          </view>
+          <view class="name line1">{{Two.name}}</view>
+          <view class="num">{{Two.onlineTime}}</view>
+        </view>
+        <view class="item">
+          <view class="pictrue">
+            <image src="{{One.avatar}}"></image>
+          </view>
+          <view class="name line1">{{One.name}}</view>
+          <view class="num">{{One.onlineTime}}</view>
+        </view>
+        <view class="item">
+          <view class="pictrue">
+            <image src="{{Three.avatar}}"></image>
+          </view>
+          <view class="name line1">{{Three.name}}</view>
+          <view class="num">{{Three.onlineTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list" wx:if="{{rankList.length}}">
+    <block wx:if="{{TabCur === 0}}">
+      <view class="item acea-row row-between-wrapper" wx:for="{{rankList}}" wx:key>
+        <view class="num">{{index+3}}</view>
+        <view class="picTxt acea-row row-between-wrapper">
+          <view class="pictrue">
+            <image src="{{item.avatar}}"></image>
+          </view>
+          <view class="text line1">{{item.name}}</view>
+        </view>
+        <view class="people font-color">{{item.money}}</view>
+      </view>
+    </block>
+    <block wx:if="{{TabCur === 1}}">
+      <view class="item acea-row row-between-wrapper" wx:for="{{rankList}}" wx:key>
+        <view class="num">{{index+3}}</view>
+        <view class="picTxt acea-row row-between-wrapper">
+          <view class="pictrue">
+            <image src="{{item.avatar}}"></image>
+          </view>
+          <view class="text line1">{{item.name}}</view>
+        </view>
+        <view class="people font-color">{{item.onlineTime}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='cu-load load-modal' wx:if="{{loadModal}}">
+    <!-- <view class='cuIcon-emojifill text-orange'></view> -->
+    <view class='gray-text'>加载中...</view>
+</view>

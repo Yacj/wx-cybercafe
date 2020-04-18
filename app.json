@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/kf/kf",
     "pages/activity/activity",
-    "pages/bindCard/bindCard"
+    "pages/bindCard/bindCard",
+    "pages/user_rank/user_rank"
   ],
   "window": {
     "backgroundTextStyle": "light",

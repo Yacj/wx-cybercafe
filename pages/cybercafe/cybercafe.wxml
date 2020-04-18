@@ -108,6 +108,5 @@
     <view class="container-bottom" hover-class="none" hover-stop-propagation="false">
 
     </view>
-    <van-toast id="van-toast"></van-toast>
     <authorize show="{{iShidden}}"></authorize>
 </view>

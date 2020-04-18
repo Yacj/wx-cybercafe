@@ -9,5 +9,11 @@ export const UserService = {
     },
     Save_User:(data)=>{
         return api('/login/Save_User','post',data)
+    },
+    get_credit:(data)=>{
+        return api('/admin/get_credit','get',data)
+    },
+    get_consume:(data)=>{
+        return api('/admin/get_consume','get',data)
     }
 }

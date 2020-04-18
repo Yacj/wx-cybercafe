@@ -1,11 +1,13 @@
 <view class="cu-bar tabbar tabbar bg-white shadow foot" style="background:#fff">
-    <block wx:for="{{list}}" wx:key="index" class="action"  data-index="{{index}}">
-     <view class="action"  data-path="{{item.pagePath}}" bindtap="switchTab" data-index="{{index}}" wx:if="{{item.isSpecial === true}}">
+    <block wx:for="{{list}}" wx:key="index" class="action" data-index="{{index}}">
+        <view class="action" data-path="{{item.pagePath}}" bindtap="switchTab" data-index="{{index}}"
+            wx:if="{{item.isSpecial === true}}">
             <view class='on-image'>
                 <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
             </view>
         </view>
-        <view class="action"  data-path="{{item.pagePath}}" bindtap="switchTab" data-index="{{index}}" wx:if="{{item.isSpecial === false}}">
+        <view class="action" data-path="{{item.pagePath}}" bindtap="switchTab" data-index="{{index}}"
+            wx:if="{{item.isSpecial === false}}">
             <view class='cuIcon-cu-image'>
                 <image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
             </view>

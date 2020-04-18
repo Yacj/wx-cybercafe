@@ -1,5 +1,7 @@
 // pages/my/my.js
-import {UserService} from "../../utils/api/user/user";
+import {
+    UserService
+} from "../../utils/api/user/user";
 
 Page({
 
@@ -11,10 +13,12 @@ Page({
         wxlogin: true, //是否隐藏登录弹窗,
         userCard: false,
         last_time: '',
-        reg_time:'',
+        reg_time: '',
         money: 0,
         points: 0,
-        order:[]
+        order: [],
+        moneyList:{},
+        money_name:''
     },
     afterAuth(e) {
         this.setData({
@@ -56,10 +60,36 @@ Page({
                     last_time: data.last_time,
                     money: data.money,
                     points: data.points,
-                    reg_time:reg_time,
+                    reg_time: reg_time,
                     loadModal: false
                 })
             }
+        })
+        UserService.get_credit({
+            limit: 3
+        }).then(res => {
+            that.setData({
+                money_name1:res.data[0].name,
+                money_money1:res.data[0].money,
+                money_name2:res.data[1].name,
+                money_money2:res.data[1].money,
+                money_name3:res.data[2].name,
+                money_money3:res.data[2].money
+            })
+
+        })
+        UserService.get_consume({
+            limit: 3
+        }).then(res=>{
+            console.log(res)
+            that.setData({
+                onlineTime_name1:res.data[0].name,
+                onlineTime_onlineTime1:res.data[0].onlineTime,
+                onlineTime_name2:res.data[1].name,
+                onlineTime_onlineTime2:res.data[1].onlineTime,
+                onlineTime_name3:res.data[2].name,
+                onlineTime_onlineTime3:res.data[2].onlineTime
+            })
         })
     },
     goLogin() {
@@ -72,11 +102,15 @@ Page({
             url: '/pages/bindCard/bindCard'
         })
     },
+    goRank() {
+        wx.navigateTo({
+            url: '/pages/user_rank/user_rank',
+        });
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
-    },
+    onReady: function () {},
 
     /**
      * 生命周期函数--监听页面显示

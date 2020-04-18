@@ -1,5 +1,4 @@
 import {isIDCard} from "../../utils/util";
-
 Page({
   data: {
     cardCur: 0,

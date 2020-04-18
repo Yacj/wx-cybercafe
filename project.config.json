@@ -24,7 +24,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.11.0",
+	"libVersion": "2.10.4",
 	"appid": "wx1088a57bf3ce7492",
 	"projectname": "cybercafe",
 	"debugOptions": {
