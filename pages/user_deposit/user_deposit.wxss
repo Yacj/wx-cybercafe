@@ -1,0 +1,50 @@
+.bg-gray {
+    background: #f2f5f7;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+}
+
+.main {
+    padding: 20px;
+}
+
+
+.itemBox {
+    flex-flow: wrap;
+}
+
+.itemBox .activeItem {
+    width: 33.3%;
+    box-sizing: border-box;
+
+}
+
+.itemBox .activeItem view {
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 8px;
+    background: white;
+    border: 2px solid white;
+    color: gray;
+    font-size: 15px;
+}
+
+.itemBox view.active>view {
+    background: #ddf0ff;
+    border: 2px solid #5cbcfe;
+    color: #2c98ef;
+}
+
+.footer {
+    padding: 0 20rpx 0 30rpx;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150rpx;
+    background-color: #fff;
+    z-index: 99;
+    border-top: 1rpx solid #f0f0f0;
+}

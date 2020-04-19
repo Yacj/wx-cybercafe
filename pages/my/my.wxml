@@ -30,8 +30,8 @@
                     <view class="my-header-leftDsc text-theme">
                         {{money}}
                     </view>
-                    <view class="my-header-leftDsc">
-                        <button class="cu-btn line-brown round text-theme">充值</button>
+                    <view class="my-header-leftDsc" bind:tap="godeposit">
+                        <button class="cu-btn line-brown  text-theme">充值</button>
                     </view>
                 </view>
                 <view class="my-header-center">
@@ -50,7 +50,7 @@
                         {{points}}
                     </view>
                     <view class='mine_head_rightDes'>
-                        <button class="cu-btn line-brown round text-theme">兑换</button>
+                        <button class="cu-btn line-brown  text-theme">兑换</button>
                     </view>
                 </view>
             </block>
@@ -187,13 +187,13 @@
         <view class="cu-list menu sm-border card-menu margin-top">
             <view class="cu-item arrow">
                 <view class="content">
-                    <image src="/assets/img/my-yhj.png" class="png" mode="aspectFit"></image>
+                    <image src="/assets/img/my-yhj.png" class="png" mode="aspectFit" style="top: -3rpx"></image>
                     <text class="">优惠卷</text>
                 </view>
             </view>
-            <view class="cu-item arrow">
+            <view class="cu-item arrow" bind:tap="goAbout">
                 <view class="content">
-                    <image src="/assets/img/my-gy.png" class="png" mode="aspectFit"></image>
+                    <image src="/assets/img/my-gy.png" class="png" mode="aspectFit" style="top: -3rpx"></image>
                     <text class="">关于我们</text>
                 </view>
             </view>

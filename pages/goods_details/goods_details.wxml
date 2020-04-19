@@ -1,0 +1,34 @@
+<!--pages/goods_details/goods_details.wxml-->
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+    <view slot="backText">商品详情</view>
+</cu-custom>
+<view class="product-con" hover-class="none" hover-stop-propagation="false">
+    <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true"
+        autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{swiperList}}" wx:key>
+            <image src="{{item.url}}" mode="aspectFill"></image>
+        </swiper-item>
+    </swiper>
+    <view class="wrapper" hover-class="none" hover-stop-propagation="false">
+        <view class="introduce">
+            商品名字
+        </view>
+        <view class="share acea-row row-between row-bottom">
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                <view class="num">
+                    28.00
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="product-intro" hover-class="none" hover-stop-propagation="false">
+        <view class="title">
+            商品介绍
+        </view>
+    </view>
+       <view class="footer acea-row row-between-wrapper" hover-class="none" hover-stop-propagation="false">
+        <view class="padding" style="flex:1">
+            <button class="cu-btn bg-theme lg" style="width:100%">确认支付</button>
+        </view>
+    </view>
+</view>

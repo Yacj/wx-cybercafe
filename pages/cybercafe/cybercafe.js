@@ -40,11 +40,13 @@ Page({
       },
       {
         id:2,
+        url:'',
         img:'/assets/img/home-icon2.png',
         name:'机位预定'
       },
       {
         id:3,
+        url:'/pages/user_deposit/user_deposit',
         img:'/assets/img/home-icon3.png',
         name:'在线充值'
       },
@@ -69,6 +71,7 @@ Page({
   },
   itemckcred(e){
     let index = e.currentTarget.dataset.index
+    let url = e.currentTarget.dataset.url
     if(index === 1){
       wx.scanCode({
         success: (result)=>{
@@ -79,6 +82,14 @@ Page({
       });
       return
     }
+    wx.navigateTo({
+      url: url,
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
   // towerSwiper
   // 初始化towerSwiper

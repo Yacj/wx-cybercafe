@@ -107,6 +107,16 @@ Page({
             url: '/pages/user_rank/user_rank',
         });
     },
+    godeposit(){
+        wx.navigateTo({
+            url:'/pages/user_deposit/user_deposit'
+        })
+    },
+    goAbout(){
+        wx.navigateTo({
+            url:'/pages/about/about'
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

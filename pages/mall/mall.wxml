@@ -6,52 +6,42 @@
     <view class="container-header">
         <view class="swiper">
             <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true"
-                    interval="5000" duration="500">
+                interval="5000" duration="500">
                 <swiper-item wx:for="{{swiperList}}" wx:key>
                     <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
                 </swiper-item>
             </swiper>
         </view>
     </view>
-    <van-notice-bar
-            text="本网咖环境优雅、设备一流、服务周到、价格实惠"
-    >
+    <van-notice-bar text="本网咖环境优雅、设备一流、服务周到、价格实惠">
     </van-notice-bar>
     <scroll-view scroll-x class="bg-white nav text-center">
-        <view class="cu-item {{index==TabCur?'text-theme cur':''}} text-xl" wx:for="{{2}}" wx:key bindtap="tabSelect"
-              data-id="{{index}}">
-            Tab{{index}}
+        <view class="cu-item {{index==TabCur?'text-theme cur':''}} text-xl" wx:for="{{TabList}}" wx:key
+            bindtap="tabSelect" data-id="{{index}}">
+            {{TabList[index]}}
         </view>
     </scroll-view>
-    <view class="contact">
-        <view class="mall-list">
-            <block wx:for="{{mall_list}}" wx:key="index" wx:for-item="product">
-                <view class="mall-item" data-id="{{product.id}}">
-                    <image class="mall-img on-sale" src="{{product.img}}" data-pid="{{product.id}}"
-                           mode="aspectFill" bindtap="">
-                    </image>
-                    <view class="bg-white">
-                        <view class=" cf padding-sm">
-                            <view class="fl padding-sm">
-                                <view>
-                                    {{product.name}}
-                                </view>
-                                <view class="text-gray text-sm">
-                                    <view class="margin-right-xs">
-                                        9800
-                                    </view>
-                                    积分 +￥98
-                                </view>
-                            </view>
-                            <view class="fr">
-                                <view class="bg-theme radius fr padding-sm">
-                                    兑换
-                                </view>
-                            </view>
+    <view class="list acea-row row-between-wrapper" hover-class="none" hover-stop-propagation="false">
+        <navigator class="item" wx:for="{{mall_list}}" wx:key="index" url='/pages/goods_details/goods_details'>
+            <view class="picture" hover-class="none" hover-stop-propagation="false">
+                <image src="{{item.img}}" />
+            </view>
+            <view class="text" hover-class="none" hover-stop-propagation="false">
+                <view class="name">
+                    {{item.name}}
+                </view>
+                <view class="jf acea-row row-between-wrapper">
+                    <view class="jf-name">
+                        {{item.number}}
+                        <view style="margin-left: 4rpx;font-size:13px;color:rgba(231,163,100,1);margin-top: 5rpx">
+                            积分 +￥98
                         </view>
                     </view>
+                    <button class="cu-btn bg-theme shadow">兑换</button>
                 </view>
-            </block>
-        </view>
+            </view>
+        </navigator>
     </view>
+</view>
+<view class="loadingicon acea-row row-center-wrapper">
 </view>

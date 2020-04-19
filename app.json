@@ -6,7 +6,10 @@
     "pages/kf/kf",
     "pages/activity/activity",
     "pages/bindCard/bindCard",
-    "pages/user_rank/user_rank"
+    "pages/user_rank/user_rank",
+    "pages/user_deposit/user_deposit",
+    "pages/goods_details/goods_details",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

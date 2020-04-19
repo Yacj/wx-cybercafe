@@ -1,0 +1,53 @@
+/* pages/goods_details/goods_details.wxss */
+.screen-swiper {
+    height: 580rpx;
+}
+.wrapper{
+    background-color: #fff;
+}
+.wrapper .introduce {
+    font-size: 32rpx;
+    color:rgba(52,52,52,1);
+    margin: 23rpx 30rpx 0 30rpx;
+}
+
+.wrapper .share {
+    margin: 0 30rpx;
+    padding-top: 25rpx;
+}
+
+.wrapper .share .name {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.wrapper .share .name .num {
+    font-size: 40rpx;
+    color:#E7A364
+}
+
+.product-intro {
+    margin-top: 20rpx;
+}
+
+.product-intro .title {
+    font-size: 30rpx;
+    color: #282828;
+    height: 86rpx;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 86rpx;
+}
+
+.footer {
+    padding: 0 20rpx 0 30rpx;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150rpx;
+    background-color: #fff;
+    z-index: 99;
+    border-top: 1rpx solid #f0f0f0;
+}

@@ -1,0 +1,29 @@
+<!--pages/about/about.wxml-->
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+    <view slot="backText">关于我们</view>
+</cu-custom>
+<view class="about">
+
+    <view class='imagesize'>
+        <image src="/assets/img/about-logo.png" class='in-image'>
+        </image>
+    </view>
+    <view class="cu-list menu">
+        <view class="cu-item arrow">
+            <view class="content">
+                <text class="">软件版本</text>
+            </view>
+            <view class="action">
+                <text class="text-sm">v1.0</text>
+            </view>
+        </view>
+          <view class="cu-item arrow">
+            <view class="content">
+                <text class="">微信公众号</text>
+            </view>
+            <view class="action">
+                <text class=" text-sm">鲨鱼网咖</text>
+            </view>
+        </view>
+    </view>
+</view>

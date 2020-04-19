@@ -37,18 +37,22 @@ Page({
         TabCur: 0,
         mall_list:[
             {
-                img:'https://www.gdjd168.cn/uploads/home/weixin/20200222/e993726002cd472e26bc8661e51eb17f.jpg',
-                name:'商品1'
+                img:'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
+                name:'荣耀1',
+                number:'23'
             },
             {
-                img:'https://www.gdjd168.cn/uploads/home/weixin/20200222/e993726002cd472e26bc8661e51eb17f.jpg',
-                name:'商品2'
+                img:'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
+                name:'荣耀2',
+                number:'23'
             },
             {
-                img:'https://www.gdjd168.cn/uploads/home/weixin/20200222/e993726002cd472e26bc8661e51eb17f.jpg',
-                name:'商品3'
+                img:'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
+                name:'荣耀3',
+                number:'23'
             }
-        ]
+        ],
+        TabList:['虚拟物品','实物物品']
     },
     tabSelect(e) {
         this.setData({
